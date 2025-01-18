@@ -1,52 +1,181 @@
+/* general */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif; /* fuente */
     margin: 0;
     padding: 0;
+    background-color: #0d1117; /* fondo mas oscuro */
+    color: #c9d1d9; /* texto blanco blando / white smoke */
 }
 
+/* Header */
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    padding: 1.5rem;
     text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Nav */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #444;
-    padding: 0.5rem 0;
+    background: #161b22;
+    padding: 1rem 0;
+    border-bottom: 2px solid #21262d;
 }
 
 nav a {
-    color: white;
-    margin: 0 1rem;
+    color: #58a6ff; /* azul */
+    margin: 0 1.5rem;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ff7b72; /* accento rojo ?*/
+    transform: scale(1.1); /* zoom */
 }
 
+/* Section en general */
 section {
-    padding: 2rem;
+    padding: 3rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    border: 1px solid #21262d;
+    background: #161b22;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.5); /* brillo azulado */
+    transition: box-shadow 0.3s;
 }
 
+section:hover {
+    box-shadow: 0 0 25px rgba(88, 166, 255, 0.8); /* ligera animacion */
+}
+
+
+#about {
+    background: linear-gradient(145deg, #21262d, #0d1117);
+    color: #c9d1d9;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #21262d;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+#about h2 {
+    color: #58a6ff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#about strong {
+    color: #ff7b72;
+}
+
+#about em {
+    color: #58a6ff;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+/* para los proyectos/img */
+#proyectos img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 10px rgba(88, 166, 255, 0.5);
+}
+
+article {
+    margin-bottom: 2rem; //en vez de px hardcodeado
+}
+
+article h3 {
+    color: #58a6ff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Form  */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, #21262d, #0d1117);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #c9d1d9;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #21262d;
+    border-radius: 8px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+}
+
+form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #58a6ff;
+    color: #0d1117;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: #ff7b72;
+    transform: scale(1.05);
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #161b22;
+    color: #c9d1d9;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    border-top: 2px solid #21262d;
 }
 
-/* Media Queries for Responsive Design */
+/* Responsivo */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        align-items: center;
     }
 
     nav a {
@@ -54,20 +183,6 @@ footer {
     }
 
     section {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        font-size: 1.5rem;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-
-    section {
-        font-size: 0.9rem;
+        padding: 1.5rem;
     }
 }
